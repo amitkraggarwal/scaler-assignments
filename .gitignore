@@ -1,0 +1,52 @@
+# .gitignore for .NET / Visual Studio projects
+
+# Build folders
+bin/
+obj/
+**/bin/
+**/obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# NuGet
+*.nupkg
+packages/
+.nuget/
+
+# Logs and databases
+*.log
+*.sqlite
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Build outputs
+*.dll
+*.exe
+*.app
+
+# Temporary
+*.tmp
+*.temp
+
+# Test results
+TestResults/
+
+# Rider and IntelliJ
+*.iml
+
+# Local history
+.history/
