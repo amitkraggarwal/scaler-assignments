@@ -45,44 +45,31 @@ public void printBoard()
         System.Console.WriteLine("--------");
     }
 }
-/*
+public int GetSize()
+{
+    return this.size;
+}
+public Cell GetBoardCell(int row, int col)
+{
+    return grid[row, col];
+}
 
     
-
-    public bool PlaceMark(int row, int col, char mark)
+    
+    public List<Cell> GetEmptyCells()
     {
-        if (row < 0 || row >= Size || col < 0 || col >= Size || grid[row, col] != ' ')
+        List<Cell> emptyCells = new List<Cell>();
+        for (int i = 0; i < size; i++)
         {
-            return false;
-        }
-
-        grid[row, col] = mark;
-        return true;
-    }
-
-    public char GetMark(int row, int col)
-    {
-        if (row < 0 || row >= Size || col < 0 || col >= Size)
-        {
-            throw new ArgumentOutOfRangeException();
-        }
-
-        return grid[row, col];
-    }
-
-    public bool IsFull()
-    {
-        for (int i = 0; i < Size; i++)
-        {
-            for (int j = 0; j < Size; j++)
+            for (int j = 0; j < size; j++)
             {
-                if (grid[i, j] == ' ')
+                if (grid[i, j].GetStatus() == CellStatus.EMPTY)
                 {
-                    return false;
+                    emptyCells.Add(grid[i, j]);
                 }
             }
         }
-        return true;
-    }
-    */
+        return emptyCells;
+    }           
+                
 }

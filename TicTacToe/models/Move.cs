@@ -7,4 +7,17 @@ public class Move
         this.player = player;
         this.cell = cell;   
     }
+    public Cell GetCell()
+    {
+        return this.cell;
+    }
+    public Player GetPlayer()
+    {
+        return this.player;
+    }
+
+    public void SetPlayer(Player player)
+    {
+        this.player = player;
+    }
 }

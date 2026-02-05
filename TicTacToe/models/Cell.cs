@@ -4,6 +4,7 @@ public class Cell
     private int column;
     private CellStatus status;
     private Player player;
+//    private Player player;
     public Cell(int row, int column)
     {
         this.row = row;
@@ -14,12 +15,26 @@ public class Cell
     public CellStatus GetStatus()
      {  return status;   }
 
-    public Player GetPlayer()
-    {
-        return player;
-    }
+    
     public void SetStatus(CellStatus status)
     {
         this.status = status;
     }
+    public int GetRow()
+    {
+        return this.row;
+    }
+    public int GetCol()
+    {
+        return this.column;
+    }  
+    public void SetPlayer(Player player)
+    {
+        this.player = player;
+    }
+    public Player GetPlayer()
+    {
+        return this.player;
+    }
+    
 }
